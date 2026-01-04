@@ -1,0 +1,59 @@
+.game-screen {
+  width: 100%;
+  max-width: 600px;
+  height: 250px;
+  background: #eee;
+  border-bottom: 4px solid #333;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.score-board {
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.track {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.runner {
+  font-size: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.runner.jump {
+  bottom: 100px;
+}
+
+.obstacle {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  animation: slide 1.5s linear infinite;
+}
+
+@keyframes slide {
+  from { right: -50px; }
+  to { right: 100%; }
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
